@@ -46,10 +46,10 @@ public class GreetingService {
     @GetMapping("/greeting")
     public String sayHello() throws InterruptedException {
 
-        logger.info("Fabian says: The /greeting endpoint was called.");
+        logger.info("Greeting service: The /greeting endpoint was called.");
         Thread.sleep((long) (Math.abs((random.nextGaussian() + 1.0) * 100.0)));
 
-        counter.add(1, Attributes.of(stringKey("fabians.custom.key"), "example value"));
+        counter.add(1, Attributes.of(stringKey("mario.key"), "payment preparation"));
 
         Thread.sleep((long) (Math.abs((random.nextGaussian() + 1.0) * 100.0)));
 
